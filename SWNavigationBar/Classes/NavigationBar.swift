@@ -36,7 +36,7 @@ public extension UIViewController {
 public extension UIViewController {
     @objc
     func tapedCustomBackButtonItem(_ sender:UIButton) -> () {
-        let count = navigationController?.childViewControllers.count ?? 0
+        let count = navigationController?.children.count ?? 0
         if count > 1 {
             navigationController?.popViewController(animated: true)
         }else if count == 1, let _ = presentingViewController {
