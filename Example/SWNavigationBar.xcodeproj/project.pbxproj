@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		2082B640BFA431F906E16EB5 /* Pods-SWNavigationBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWNavigationBar_Example.release.xcconfig"; path = "Target Support Files/Pods-SWNavigationBar_Example/Pods-SWNavigationBar_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3E73BF21D73E1FB78CBB3FE0 /* Pods-SWNavigationBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWNavigationBar_Tests.release.xcconfig"; path = "Target Support Files/Pods-SWNavigationBar_Tests/Pods-SWNavigationBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		4F789A0DC16AA89ABE9337BA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4F789A0DC16AA89ABE9337BA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SWNavigationBar_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWNavigationBar_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,8 +43,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6AB5838E793D813AE9CD1756 /* Pods_SWNavigationBar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWNavigationBar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82DE219EF1FD7344C4BFF36D /* Pods-SWNavigationBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWNavigationBar_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SWNavigationBar_Tests/Pods-SWNavigationBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B85539688DA3E4069ECB2F83 /* SWNavigationBar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SWNavigationBar.podspec; path = ../SWNavigationBar.podspec; sourceTree = "<group>"; };
-		E5092C51D2E4121A75857801 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B85539688DA3E4069ECB2F83 /* SWNavigationBar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SWNavigationBar.podspec; path = ../SWNavigationBar.podspec; sourceTree = "<group>"; };
+		E5092C51D2E4121A75857801 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		EB2C145958F6E3AF90914C73 /* Pods-SWNavigationBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWNavigationBar_Example.debug.xcconfig"; path = "Target Support Files/Pods-SWNavigationBar_Example/Pods-SWNavigationBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F928F490B3AF91A65BBB6BEF /* Pods_SWNavigationBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWNavigationBar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,7 +86,6 @@
 				82DE219EF1FD7344C4BFF36D /* Pods-SWNavigationBar_Tests.debug.xcconfig */,
 				3E73BF21D73E1FB78CBB3FE0 /* Pods-SWNavigationBar_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -498,12 +498,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SWNavigationBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -513,12 +514,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SWNavigationBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

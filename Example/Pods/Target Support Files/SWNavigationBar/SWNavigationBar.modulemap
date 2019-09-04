@@ -1,0 +1,6 @@
+framework module SWNavigationBar {
+  umbrella header "SWNavigationBar-umbrella.h"
+
+  export *
+  module * { export * }
+}
