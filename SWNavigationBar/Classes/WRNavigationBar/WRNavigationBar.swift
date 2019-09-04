@@ -825,7 +825,7 @@ extension DispatchQueue {
 //===========================================================================================
 // MARK: - default navigationBar barTintColor、tintColor and statusBarStyle YOU CAN CHANGE!!!
 //===========================================================================================
-class WRNavigationBar
+public class WRNavigationBar
 {
     fileprivate struct AssociatedKeys
     {   // default is system attributes
@@ -837,7 +837,7 @@ class WRNavigationBar
         static var defShadowImageHidden: Bool = false
     }
     
-    class var defaultNavBarBarTintColor: UIColor {
+    public class var defaultNavBarBarTintColor: UIColor {
         get {
             guard let def = objc_getAssociatedObject(self, &AssociatedKeys.defNavBarBarTintColor) as? UIColor else {
                 return AssociatedKeys.defNavBarBarTintColor
@@ -849,7 +849,7 @@ class WRNavigationBar
         }
     }
     
-    class var defaultNavBarBackgroundImage: UIImage? {
+    public class var defaultNavBarBackgroundImage: UIImage? {
         get {
             guard let def = objc_getAssociatedObject(self, &AssociatedKeys.defNavBarBackgroundImage) as? UIImage else {
                 return nil
@@ -861,7 +861,7 @@ class WRNavigationBar
         }
     }
     
-    class var defaultNavBarTintColor: UIColor {
+    public class var defaultNavBarTintColor: UIColor {
         get {
             guard let def = objc_getAssociatedObject(self, &AssociatedKeys.defNavBarTintColor) as? UIColor else {
                 return AssociatedKeys.defNavBarTintColor
@@ -873,7 +873,7 @@ class WRNavigationBar
         }
     }
     
-    class var defaultNavBarTitleColor: UIColor {
+    public class var defaultNavBarTitleColor: UIColor {
         get {
             guard let def = objc_getAssociatedObject(self, &AssociatedKeys.defNavBarTitleColor) as? UIColor else {
                 return AssociatedKeys.defNavBarTitleColor
@@ -885,7 +885,7 @@ class WRNavigationBar
         }
     }
     
-    class var defaultStatusBarStyle: UIStatusBarStyle {
+    public class var defaultStatusBarStyle: UIStatusBarStyle {
         get {
             guard let def = objc_getAssociatedObject(self, &AssociatedKeys.defStatusBarStyle) as? UIStatusBarStyle else {
                 return .default
@@ -897,7 +897,7 @@ class WRNavigationBar
         }
     }
     
-    class var defaultShadowImageHidden: Bool {
+    public class var defaultShadowImageHidden: Bool {
         get {
             guard let def = objc_getAssociatedObject(self, &AssociatedKeys.defShadowImageHidden) as? Bool else {
                 return false
@@ -909,7 +909,7 @@ class WRNavigationBar
         }
     }
     
-    class var defaultBackgroundAlpha: CGFloat {
+    public class var defaultBackgroundAlpha: CGFloat {
         get {
             return 1.0
         }
@@ -951,20 +951,20 @@ class WRNavigationBar
 extension WRNavigationBar
 {
     ///是否是异形屏（正常屏 状态栏高度为 20pt）
-    class func isShapedScreen() -> Bool {
+    public class func isShapedScreen() -> Bool {
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         return statusBarHeight > CGFloat(20)
     }
-    class func navBarBottom() -> Int {
+    public class func navBarBottom() -> Int {
         return self.isShapedScreen() ? 88 : 64;
     }
-    class func tabBarHeight() -> Int {
+    public class func tabBarHeight() -> Int {
         return self.isShapedScreen() ? 83 : 49;
     }
-    class func screenWidth() -> Int {
+    public class func screenWidth() -> Int {
         return Int(UIScreen.main.bounds.size.width)
     }
-    class func screenHeight() -> Int {
+    public class func screenHeight() -> Int {
         return Int(UIScreen.main.bounds.size.height)
     }
 }
