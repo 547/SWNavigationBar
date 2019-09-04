@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SWNavigationBar_Example' do
+  pod 'SWNavigationBar', :path => '../'
+
+  target 'SWNavigationBar_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
