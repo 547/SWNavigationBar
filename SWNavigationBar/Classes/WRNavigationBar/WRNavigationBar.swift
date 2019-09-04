@@ -731,11 +731,11 @@ extension UIViewController: WRAwakeProtocol
     
     @objc func wr_viewWillAppear(_ animated: Bool)
     {
-        SN.log("\(#function) - self: \(self.description)")
+        print("\(#function) - self: \(self.description)")
         if canUpdateNavigationBar() == true {
             pushToNextVCFinished = false
             let content = navigationController?.navBarBackgroundImage == nil ? "nil" : "no nil"
-            SN.log("\(content)")
+            print("\(content)")
             updateNavigationBarDisplayStyle()
         }
         wr_viewWillAppear(animated)
@@ -751,13 +751,13 @@ extension UIViewController: WRAwakeProtocol
     
     @objc func wr_viewDidAppear(_ animated: Bool)
     {
-        SN.log("\(#function) - self: \(self.description)")
+        print("\(#function) - self: \(self.description)")
         if self.navigationController?.viewControllers.first != self {
             self.pushToCurrentVCFinished = true
         }
         if canUpdateNavigationBar() == true
         {
-            SN.log("\(#function) - self: \(self.description) canUpdateNavigationBar")
+            print("\(#function) - self: \(self.description) canUpdateNavigationBar")
             updateNavigationBarDisplayStyle()
         }
         wr_viewDidAppear(animated)
