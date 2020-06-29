@@ -1010,7 +1010,7 @@ class NothingToSeeHere
 // 2. 让APP启动时只执行一次 harmlessFunction 方法
 extension UIApplication
 {
-    private static let runOnce:Void = { //使用静态属性以保证只调用一次(该属性是个方法)
+    fileprivate static let runOnce:Void = { //使用静态属性以保证只调用一次(该属性是个方法)
         NothingToSeeHere.harmlessFunction()
     }()
     
@@ -1023,3 +1023,10 @@ extension UIApplication
 // 3. 自定义类实现 WRAwakeProtocol 协议，重写 wrAwake 方法
 //    自定义类实现 WRFatherAwakeProtocol 协议，重写 fatherAwake 方法
 
+public extension WRNavigationBar {
+    
+    /// iOS 13 调试时 applicationDidFinishLaunching 后已经不会调用 next 属性了，所以method swizzling不成功，所以暂时使用这个方法手动swizzling
+    static func customLoad() -> () {
+        UIApplication.runOnce
+    }
+}
